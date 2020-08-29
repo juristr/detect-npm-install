@@ -18,7 +18,6 @@ let changedFiles = shell.exec(
     CURRENT_HEAD
 );
 
-// Checks to see if package.json has changed. If so, alerts user to run npm install.
 if (changedFiles.includes('package.json')) {
   let msg = 'package.json changed: ';
   if (fs.existsSync('yarn.lock')) {
@@ -39,5 +38,4 @@ if (changedFiles.includes('package.json')) {
       ].join('\n')
     )
   );
-  //shell.exec('npm install');
 }
