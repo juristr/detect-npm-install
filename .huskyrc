@@ -1,0 +1,27 @@
+# .huskyrc is in YAML format
+# list scripts here that you want to hook into git client actions (git server hooks are not supported)
+# https://git-scm.com/docs/githooks
+# ------------------ client side hooks
+# applypatch-msg
+# pre-applypatch
+# post-applypatch
+# pre-commit
+# prepare-commit-msg
+# commit-msg
+# post-commit
+# pre-rebase
+# post-checkout
+# post-merge
+# pre-push
+# post-update
+# push-to-checkout
+# pre-auto-gc
+# post-rewrite
+# sendemail-validate
+# fsmonitor-watchman
+# p4-pre-submit
+# -------------------
+hooks:
+  "post-checkout": "cross-env-shell node tools/node-modules-check.js $HUSKY_GIT_PARAMS"
+
+

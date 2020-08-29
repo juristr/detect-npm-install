@@ -7,5 +7,12 @@
     "start": "node ./src/index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "cross-env": "^7.0.2",
+    "husky": "^4.2.5",
+    "shelljs": "^0.8.4"
+  },
+  "dependencies": {}
 }
